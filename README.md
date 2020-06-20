@@ -8,17 +8,17 @@ To install all required dependencies, run `pip install -r requirements.txt`
 * Clone the repository and enter into the directory
 
 ```bash
-git clone
-cd  
+git clone https://github.com/janvishah21/emotion_prediction.git
+cd emotion_prediction
 ```
 
-* We have also provided our pre-trained model `model.h5` if you do not want to train the model. Otherwise to train the model, download dataset from [here](https://drive.google.com/file/d/1X60B-uR3NtqPd4oosdotpbDgy8KOfUdr/view?usp=sharing) and unzip it to create directory `data` right inside main repository. For training, run
+* To train the model, download dataset from [here](https://drive.google.com/file/d/1X60B-uR3NtqPd4oosdotpbDgy8KOfUdr/view?usp=sharing) and unzip it to create directory `data` right inside main repository. For training, run
 
 ```bash
 python train_model.py
 ```
 
-This will train a new model and its weights will be stored in `model.h5` file.
+This will train a new model and its weights will be stored in `model.h5` file. If you want to skip this step(do not want to train your model), you can use our pre-trained `model.h5` model further.
 
 * When trained model is ready, run
 
