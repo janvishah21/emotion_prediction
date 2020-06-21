@@ -1,5 +1,5 @@
 # Real Time Emotion Prediction
-A deep CNN to classify the facial emotion into 7 categories. The model is trained on the **FER-2013** dataset which was a part of kaggle FER-2013 challenge. This dataset consists of 35887 grayscale, 48x48 sized face images with **7 categories** as follows : angry, disgusted, fearful, happy, neutral, sad, surprised.
+A deep CNN to classify the facial emotion into 7 categories. The model is trained on the **FER-2013** dataset which was a part of kaggle FER-2013 challenge. This dataset consists of 35887 grayscale, 48x48 sized face images with **7 categories** as follows : angry, disgusted, fearful, happy, neutral, sad, surprised. We have used haar cascade method for face detection. We create softmax scores for all 7 categories and emotion with maximum score is displayed.
 
 ## Dependencies
 To install all required dependencies, run `pip install -r requirements.txt`
@@ -26,12 +26,3 @@ This will train a new model and its weights will be stored in `model.h5` file. I
 python main.py
 ```
 Now, go to http://127.0.0.1:5000/ in your browser...
-
-## Algorithm
-* **Haar cascade** method is used to detect faces in each frame of the webcam feed.
-
-* The 48x48 region of image containing the face is passed to CNN.
-
-* The network outputs a list of **softmax scores** for 7 categories.
-
-* The emotion with maximum score among them is displayed on the screen.
