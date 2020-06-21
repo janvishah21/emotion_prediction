@@ -12,7 +12,7 @@ git clone https://github.com/janvishah21/emotion_prediction.git
 cd emotion_prediction
 ```
 
-* To train the model, download dataset from [here](https://drive.google.com/file/d/1X60B-uR3NtqPd4oosdotpbDgy8KOfUdr/view?usp=sharing) and unzip it to create directory `data` right inside main repository. For training, run
+* To train the model, we have converted actual csv file into a dataset of images, you can download dataset from [here](https://drive.google.com/file/d/1rkC29dRCaq8TZBh0ZRFANHwW3-PeIsrS/view?usp=sharing) and unzip it to create directory `data` right inside main repository. For training, run
 
 ```bash
 python train_model.py
@@ -25,4 +25,4 @@ This will train a new model and its weights will be stored in `model.h5` file. I
 ```bash
 python main.py
 ```
-Now, go to http://127.0.0.1:5000/ in the browser...
+Now, go to http://127.0.0.1:5000/ in your browser...
