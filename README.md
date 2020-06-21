@@ -26,3 +26,12 @@ This will train a new model and its weights will be stored in `model.h5` file. I
 python main.py
 ```
 Now, go to http://127.0.0.1:5000/ in your browser...
+
+## Algorithm
+* **Haar cascade** method is used to detect faces in each frame of the webcam feed.
+
+* The 48x48 region of image containing the face is passed to CNN.
+
+* The network outputs a list of **softmax scores** for 7 categories.
+
+* The emotion with maximum score among them is displayed on the screen.
