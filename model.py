@@ -1,14 +1,12 @@
 import numpy as np
-from tensorflow import keras
-from keras import Sequential
-from keras.layers import Dense, Dropout, Flatten
-from keras.layers import Conv2D
-from keras.optimizers import Adam
-from keras.layers import MaxPooling2D
-from keras.preprocessing.image import ImageDataGenerator
-
-import tensorflow as tf
-graph = tf.get_default_graph()
+from tensorflow.keras import Sequential
+from tensorflow.keras.layers import Dense, Dropout, Flatten
+from tensorflow.keras.layers import Conv2D
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.layers import MaxPooling2D
+from tensorflow.keras.preprocessing.image import ImageDataGenerator
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 class FacialExpressionModel(object):
     emotion_dict = {0: "Angry", 1: "Disgusted", 2: "Fearful", 3: "Happy", 4: "Neutral", 5: "Sad", 6: "Surprised"}
@@ -35,6 +33,5 @@ class FacialExpressionModel(object):
     	self.loaded_model._make_predict_function()
 
     def predict_emotion(self, img):
-    	with graph.as_default():
-    		self.preds = self.loaded_model.predict(img)
+    	self.preds = self.loaded_model.predict(img)
         return FacialExpressionModel.emotion_dict[int(np.argmax(self.preds))]
