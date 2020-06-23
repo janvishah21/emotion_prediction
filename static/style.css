@@ -1,0 +1,22 @@
+html{
+	background: #5D27C1;
+	background: -webkit-linear-gradient(top left, #FC5C7D, #302b63, #89253e);
+	background: -moz-linear-gradient(top left, #FC5C7D, #302b63, #89253e);
+	background: linear-gradient(to bottom right, #FC5C7D, #302b63, #89253e);
+	font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,Arial,sans-serif;
+}
+
+h1{
+	font-size: 40px;
+	color: white;
+	text-shadow: 0 3px 5px #000;
+}
+
+#video_frame{
+	border-radius: 20px;
+	box-shadow : 0 0 20px #000;
+}
+
+#git_logo{
+	height: 36px;
+}

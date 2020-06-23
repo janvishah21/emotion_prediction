@@ -1,14 +1,16 @@
 <html>
   <head>
     <title>Emotion Prediction Flask App</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
   </head>
   <body>
   	<div style="margin: 25px;text-align: center;">
   		<h1>Real Time Emotion Prediction</h1>
-    	<img width=800px height=480px src="{{ url_for('emotion_pred') }}">
-    	<br><br><hr>
-    	<div style="float: left;"><h2>Author : Janvi Shah</h2></div>
-    	<div style="float: right;"><h2><a href="https://github.com/janvishah21/emotion_prediction" target="_blank">Github Link</h2></p></div>
+    	<img id="video_frame" width=800px height=480px src="{{ url_for('emotion_pred') }}">
+    	<br><br><hr><br>
+    	<div style="float: center;"><a href="https://github.com/janvishah21/emotion_prediction" target="_blank">
+    		<img id="git_logo" src="{{ url_for('static', filename='github_logo.png') }}">
+    	</div>
   	</div>
   </body>
 </html>

@@ -4,7 +4,7 @@ import numpy as np
 
 facec = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 model = FacialExpressionModel("model.h5")
-font = cv2.FONT_HERSHEY_SIMPLEX
+font = cv2.FONT_HERSHEY_DUPLEX
 
 class VideoCamera(object):
     def __init__(self):
@@ -25,7 +25,7 @@ class VideoCamera(object):
         	roi_gray = gray[y:y + h, x:x + w]
         	cropped_img = np.expand_dims(np.expand_dims(cv2.resize(roi_gray, (48, 48)), -1), 0)
         	prediction = model.predict_emotion(cropped_img)
-	        cv2.putText(frame, prediction, (x+20, y-60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 255), 2, cv2.LINE_AA)
+	        cv2.putText(frame, prediction, (x+20, y-60), font, 1, (0, 255, 255), 2, cv2.LINE_AA)
 
         _, jpeg = cv2.imencode('.jpg', cv2.resize(frame,(800,480), interpolation = cv2.INTER_CUBIC))
         return jpeg.tobytes()
