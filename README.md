@@ -24,4 +24,9 @@ This will train a new model and its weights will be stored in `model.h5` file. I
 ```bash
 python main.py
 ```
-Now, go to http://127.0.0.1:5000/ in your browser, give permission to the browser to use webcamera(if asked) and see the predictions...
+Now, go to http://127.0.0.1:5000/ in your browser, give permission to the browser to use webcamera(if asked) and see the predictions.
+
+## License
+MIT License
+
+Copyright (c) 2020 Janvi Shah
